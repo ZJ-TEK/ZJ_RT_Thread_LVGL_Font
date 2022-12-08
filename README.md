@@ -1,49 +1,46 @@
-# ZJ-RT-Thread-NIMBLE-NORDIC
-基于国产开源RT-Thread操作系统和开源BLE5.0(mynewt-nimble)协议栈+开源GUI LittlevGL在nordic(nrf52840)平台上的应用
-- 国产开源RT-Thread操作系统
-- 彻底开源的BLE5.0协议栈源码
-- 开源GUI LittlevGL
+# ZJ_RT_Thread_LVGL_Font
+这个代码用于验证Py_FontMaker工具生成的字库
 
-## ZJ-BLE介绍
-- ZJ-BLE源码使用mynewt-nimble开源BLE协议栈 [https://github.com/apache/mynewt-nimble](https://github.com/apache/mynewt-nimble)
-   - RT-Thread官方的出的nimble的见胡大神的GitHub [nrf52832-bsp](https://github.com/EvalZero/nrf52832-nimble)
-- ZJ-BLE源码使用的RT-Thread V4.0内核 [https://github.com/RT-Thread/rt-thread](https://github.com/RT-Thread/rt-thread) 
-- ZJ-BLE源码使用的NORDIC官方SDK15.0的nrfx驱动 [http://developer.nordicsemi.com/nRF5_SDK/](http://developer.nordicsemi.com/nRF5_SDK/) 
-- ZJ-BLE源码使用LittlevGL masterV6.02 [https://github.com/littlevgl/lvgl](https://github.com/littlevgl/lvgl)
-- ZJ-BLE源码支持nrf52832和nrf52840蓝牙芯片 
-- ZJ-BLE源码支持KEIL集成开发环境开发 
+## Py_FontMaker介绍
+- help信息
 
-## SDK支持的IDE
-- MDK Keil [https://www.keil.com/download/product/](https://www.keil.com/download/product/)
+  ![Py_FontMaker -h](/ZJ_TOOLS/image/pictures/Py_FontMaker.jpg) 
 
-## 硬件平台 
-- NORDIC nrf52840
+- 工具生成的代码
 
-## HRM例程演示效果
-- 广播hrm_adv    注意广播内容中无处不在的广告！
+  ![Py_FontMaker -h](/ZJ_TOOLS/image/pictures/工具生成的demo代码.jpg) 
 
-  ![hrm_adv](/ZJ_TOOLS/image/pictures/hrm_adv.png) 
+- 命令描述
+
+|命令	|描述	|使用者	|默认|
+| ------------ | ------------ | ------------ | ------------ |
+|-h,	|显示此帮助消息并退出|||		
+|--XBF	|功能项-> ttf 生成 XBF|		|False|
+|--LIB	|功能项-> xbf生成font_lib|		|False|
+|--CODE |	功能项-> 产生内部字库|		|False|
+|--min	|参数-> unicode最小值	|XBF使用	|0x00|
+|--max 	|参数-> unicode最大值	|XBF使用	|0xffff|
+|--ttf 	|参数-> 字体文件路径	|XBF,LIB(fake字库使用)和CODE	|.\font_xbf\TTF_file\HarmonyOS_Sans_SC_Medium.ttf|
+|--bpp	|参数-> 灰度位	|XBF,LIB(fake字库使用)和CODE	|2|
+|--height 	|参数-> 字符像素高度	|XBF,LIB(fake字库使用)和CODE	|24|
+|--lib_file	|参数-> 生成Font_Lib时的字库类型文件	|LIB使用	|.\font_type\all_font_type_to_generate.txt|
+|--fake_file	|参数-> 生成Fake font字符的txt文件	|LIB(fake字库使用)	|.\font_type\FAKE_FONT_CODE_POINT.txt|
+|--inte_file	|参数-> 生成内部字库字符的txt文件	|CODE使用	|.\font_type\INTERIOR_FONT_CODE_POINT.txt|
+|--lvgl	|参数-> 支持LVGL的字库	|LIB使用	|True|
+|--hash	|参数-> cmap支持hash查找	|LIB使用	|True|
+|--rle	|参数-> 支持Run Length Encode压缩	|LIB使用	|True|
+|--cache	|参数-> 字库支持字符描述缓存	|LIB使用	|True|
+
+## 字库显示效果
+- LVGL显示效果
+
+  ![LVGL显示效果](/ZJ_TOOLS/image/pictures/LVGL显示效果.jpg) 
   
-- 设备信息hrm_dev_info    注意设备信息中无处不在的广告！
+- 裸机显示效果
 
-  ![hrm_dev_info](/ZJ_TOOLS/image/pictures/hrm_dev_info.png)
-  
-- 心率显示hrm
-
-  ![hrm](/ZJ_TOOLS/image/pictures/hrm.png)
-  
-## UI显示效果
-- 显示效果1
-
-  ![显示效果1](/ZJ_TOOLS/image/pictures/LCD1.png) 
-  
-- 显示效果2
-
-  ![显示效果2](/ZJ_TOOLS/image/pictures/LCD2.png)
+  ![裸机显示效果](/ZJ_TOOLS/image/pictures/非LVGL显示效果.jpg)
 
 ### 公众号:Bluetooth-BLE  
   ![公众号:Bluetooth-BLE](/ZJ_TOOLS/image/QR/公众号.jpg  "公众号:Bluetooth-BLE") 
-### 论坛:bbs.codertown.cn
-  ![论坛:bbs.codertown.cn](/ZJ_TOOLS/image/QR/bbs.codertown.cn.jpg  "论坛:bbs.codertown.cn") 
 ### QQ群:177341833  
   ![QQ群:177341833](/ZJ_TOOLS/image/QR/qq群.jpg  "QQ群:177341833") 
