@@ -8,7 +8,7 @@
 #ifndef _EXT_FONT_APP_H_
 #define _EXT_FONT_APP_H_
 
-#include "Font_lib.h"
+#include "Font_Lib.h"
 
 typedef enum FONTTYPE
 {

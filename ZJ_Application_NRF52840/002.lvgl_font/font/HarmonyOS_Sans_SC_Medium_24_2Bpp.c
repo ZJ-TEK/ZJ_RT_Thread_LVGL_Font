@@ -5,7 +5,7 @@
  * author: John
  * github: 
  */ 
-#include "Font_lib.h"
+#include "Font_Lib.h"
 #include "ext_font_engine.h"
 
 #if !CMAP_HASH_ENABLE && !BITMAP_RLE_ENCODE_ENABLE

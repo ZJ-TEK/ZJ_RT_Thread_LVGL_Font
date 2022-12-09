@@ -8,7 +8,7 @@
  * Version: 0x91fcc446
  */
 
-#include "Font_lib.h"
+#include "Font_Lib.h"
 
 
 const font_type_info_t fHarmonyOS_Sans_SC_Medium_24_2Bpp_font_info =

@@ -8,7 +8,7 @@
 #ifndef _EXT_FONT_ENGINE_H_
 #define _EXT_FONT_ENGINE_H_
 
-#include "Font_lib.h"
+#include "Font_Lib.h"
 #include "ext_font_app.h"
 
 #ifdef __cplusplus

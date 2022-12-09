@@ -17,7 +17,7 @@
 
 
 /** use LVGL, you need to set LVGL_FONT_ENABLE macro to 1 */
-#define LVGL_FONT_ENABLE               1
+#define LVGL_FONT_ENABLE               0
 
 
 /** CMAP search use HASH, you need to set CMAP_HASH_ENABLE macro to 1 */
