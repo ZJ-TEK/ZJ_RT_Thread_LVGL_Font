@@ -1,6 +1,9 @@
 # ZJ_RT_Thread_LVGL_Font
 这个代码用于验证Py_FontMaker工具生成的字库
 
+Py_FontMaker_Beta.exe的字库工具链接
+https://github.com/ZJ-TEK/Py_FontMaker_Beta
+
 验证开发板淘宝链接(只有57块，有想玩的就玩吧)
 
 https://m.tb.cn/h.URsW5y2?tk=SO4YdWH1lQO
