@@ -1,0 +1,7 @@
+device NRF52840_XXAA
+si SWD
+speed 4000
+r
+h
+erase 0x0 0x1000 
+q

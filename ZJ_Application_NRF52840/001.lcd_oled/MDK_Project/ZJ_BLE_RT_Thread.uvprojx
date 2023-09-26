@@ -10,12 +10,13 @@
       <TargetName>ZJ_BLE_RT_Thread</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>nRF52840_xxAA</Device>
           <Vendor>Nordic Semiconductor</Vendor>
-          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.44.1</PackID>
+          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.35.0</PackID>
           <PackURL>http://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/</PackURL>
           <Cpu>IRAM(0x20000000,0x40000) IROM(0x00000000,0x100000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -183,6 +184,8 @@
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
             <RvdsVP>2</RvdsVP>
+            <RvdsMve>0</RvdsMve>
+            <RvdsCdeCp>0</RvdsCdeCp>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -323,6 +326,7 @@
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
+            <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
             <v6LangP>1</v6LangP>
@@ -332,10 +336,10 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls>--reduce_paths</MiscControls>
+              <MiscControls>--reduce_paths --locale=english</MiscControls>
               <Define>APP_ENTRY_POINT=entry FLOAT_ABI_HARD CONFIG_GPIO_AS_PINRESET NRF52840_XXAA</Define>
               <Undefine></Undefine>
-              <IncludePath>../../../RT_THREAD/include;../../../RT_THREAD/libcpu/arm/cortex-m4;../../../RT_THREAD/libcpu/arm/common;../../../RT_THREAD/components/finsh;../../../RT_THREAD/components/drivers/include;../../../NORDIC_SDK/components;../../../NORDIC_SDK/components/drivers_nrf/nrf_soc_nosd;../../../NORDIC_SDK/components/libraries/atomic;../../../NORDIC_SDK/components/libraries/balloc;../../../NORDIC_SDK/components/libraries/experimental_log;../../../NORDIC_SDK/components/libraries/experimental_log/src;../../../NORDIC_SDK/components/libraries/experimental_memobj;../../../NORDIC_SDK/components/libraries/experimental_section_vars;../../../NORDIC_SDK/components/libraries/strerror;../../../NORDIC_SDK/components/libraries/uart;../../../NORDIC_SDK/components/libraries/util;../../../NORDIC_SDK/components/libraries/timer;../../../NORDIC_SDK/components/toolchain/cmsis/include;../../../NORDIC_SDK/integration/nrfx;../../../NORDIC_SDK/integration/nrfx/legacy;../../../NORDIC_SDK/modules/nrfx;../../../NORDIC_SDK/modules/nrfx/hal;../../../NORDIC_SDK/modules/nrfx/mdk;../../../NORDIC_SDK/modules/nrfx/drivers/include;../../../NORDIC_SDK/external/fprintf;../../../NORDIC_SDK/external/segger_rtt;../../../RT_THREAD_NRF_HAL/inc;../config;../RT_Thread_Startup;../applications/app_init;../applications/app_gpio;../applications/app_event;../startups;..\bsp_driver\include;..\font</IncludePath>
+              <IncludePath>../../../RT_THREAD/include;../../../RT_THREAD/libcpu/arm/cortex-m4;../../../RT_THREAD/libcpu/arm/common;../../../RT_THREAD/components/finsh;../../../RT_THREAD/components/drivers/include;../../../NORDIC_SDK/components;../../../NORDIC_SDK/components/drivers_nrf/nrf_soc_nosd;../../../NORDIC_SDK/components/libraries/atomic;../../../NORDIC_SDK/components/libraries/balloc;../../../NORDIC_SDK/components/libraries/experimental_log;../../../NORDIC_SDK/components/libraries/experimental_log/src;../../../NORDIC_SDK/components/libraries/experimental_memobj;../../../NORDIC_SDK/components/libraries/experimental_section_vars;../../../NORDIC_SDK/components/libraries/strerror;../../../NORDIC_SDK/components/libraries/uart;../../../NORDIC_SDK/components/libraries/util;../../../NORDIC_SDK/components/libraries/timer;../../../NORDIC_SDK/components/toolchain/cmsis/include;../../../NORDIC_SDK/integration/nrfx;../../../NORDIC_SDK/integration/nrfx/legacy;../../../NORDIC_SDK/modules/nrfx;../../../NORDIC_SDK/modules/nrfx/hal;../../../NORDIC_SDK/modules/nrfx/mdk;../../../NORDIC_SDK/modules/nrfx/drivers/include;../../../NORDIC_SDK/external/fprintf;../../../NORDIC_SDK/external/segger_rtt;../../../RT_THREAD_NRF_HAL/inc;../config;../RT_Thread_Startup;../applications/app_init;../applications/app_gpio;../applications/app_event;../startups;..\bsp_driver\include;..\font;..\language</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -348,7 +352,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <uClangAs>0</uClangAs>
+            <ClangAsOpt>4</ClangAsOpt>
             <VariousControls>
               <MiscControls>--cpreproc_opts=-DBLE_STACK_SUPPORT_REQD,-DNRF_SD_BLE_API_VERSION=4,-DS132,-DSOFTDEVICE_PRESENT,-DSWI_DISABLE0,-DCONFIG_GPIO_AS_PINRESET,-DNRF52,-DNRF52832_XXAA,-DNRF52_PAN_12,-DNRF52_PAN_15,-DNRF52_PAN_20,-DNRF52_PAN_31,-DNRF52_PAN_36,-DNRF52_PAN_51,-DNRF52_PAN_54,-DNRF52_PAN_55,-DNRF52_PAN_58,-DNRF52_PAN_64,-DNRF52_PAN_74</MiscControls>
               <Define></Define>
@@ -820,9 +824,9 @@
           <GroupName>font</GroupName>
           <Files>
             <File>
-              <FileName>cmap_fHarmonyOS_Sans_SC_Medium_24_2Bpp.c</FileName>
+              <FileName>cmap_Full_HarmonyOS_Sans_SC_Medium_24_2Bpp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\font\cmap_fHarmonyOS_Sans_SC_Medium_24_2Bpp.c</FilePath>
+              <FilePath>..\font\cmap_Full_HarmonyOS_Sans_SC_Medium_24_2Bpp.c</FilePath>
             </File>
             <File>
               <FileName>cmap_HarmonyOS_Sans_SC_Medium_24_2Bpp.c</FileName>
@@ -845,9 +849,79 @@
               <FilePath>..\font\fake_font_24_2Bpp.c</FilePath>
             </File>
             <File>
-              <FileName>HarmonyOS_Sans_SC_Medium_24_2Bpp.c</FileName>
+              <FileName>cmap_emoji_font_32_8Bpp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\font\HarmonyOS_Sans_SC_Medium_24_2Bpp.c</FilePath>
+              <FilePath>..\font\cmap_emoji_font_32_8Bpp.c</FilePath>
+            </File>
+            <File>
+              <FileName>cmap_icon_font_32_8Bpp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\font\cmap_icon_font_32_8Bpp.c</FilePath>
+            </File>
+            <File>
+              <FileName>inner_HarmonyOS_Sans_SC_Medium_24_2Bpp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\font\inner_HarmonyOS_Sans_SC_Medium_24_2Bpp.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>language</GroupName>
+          <Files>
+            <File>
+              <FileName>lang_en_us.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\language\lang_en_us.c</FilePath>
+            </File>
+            <File>
+              <FileName>language.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\language\language.c</FilePath>
+            </File>
+            <File>
+              <FileName>lang_de_DE.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\language\lang_de_DE.c</FilePath>
+            </File>
+            <File>
+              <FileName>lang_es_ES.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\language\lang_es_ES.c</FilePath>
+            </File>
+            <File>
+              <FileName>lang_fr_FR.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\language\lang_fr_FR.c</FilePath>
+            </File>
+            <File>
+              <FileName>lang_it_IT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\language\lang_it_IT.c</FilePath>
+            </File>
+            <File>
+              <FileName>lang_ja_jp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\language\lang_ja_jp.c</FilePath>
+            </File>
+            <File>
+              <FileName>lang_pt_PT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\language\lang_pt_PT.c</FilePath>
+            </File>
+            <File>
+              <FileName>lang_ru_RU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\language\lang_ru_RU.c</FilePath>
+            </File>
+            <File>
+              <FileName>lang_zh_cn.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\language\lang_zh_cn.c</FilePath>
+            </File>
+            <File>
+              <FileName>lang_zh_hk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\language\lang_zh_hk.c</FilePath>
             </File>
           </Files>
         </Group>

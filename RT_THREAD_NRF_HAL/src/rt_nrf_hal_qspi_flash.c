@@ -377,5 +377,5 @@ static int rt_hw_qspi_init(void)
                       RT_DEVICE_FLAG_RDWR | RT_DEVICE_FLAG_REMOVABLE | RT_DEVICE_FLAG_STANDALONE);
     return 0;
 }
-//INIT_DEVICE_EXPORT(rt_hw_qspi_init);
+INIT_DEVICE_EXPORT(rt_hw_qspi_init);
 

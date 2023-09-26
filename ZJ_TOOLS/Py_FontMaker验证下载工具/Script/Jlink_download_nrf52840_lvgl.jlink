@@ -1,0 +1,10 @@
+device NRF52840_XXAA
+si SWD
+speed 4000
+r
+h
+WaitHalt 1000
+loadbin .\hex\zj_ble_rtthread_font_lvgl.hex 0x0
+r
+g
+q

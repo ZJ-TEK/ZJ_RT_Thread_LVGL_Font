@@ -48,7 +48,7 @@ static rt_err_t nrf52840_lcd_control(rt_device_t device, int cmd, void *args)
     {
     case RTGRAPHIC_CTRL_RECT_UPDATE:
     {
-        lcd_ie3130b_put_gfx(0, 0, lcd.info.width, lcd.info.height, lcd.info.framebuffer);
+//        lcd_ie3130b_put_gfx(0, 0, lcd.info.width, lcd.info.height, lcd.info.framebuffer);
     }
         break;
 

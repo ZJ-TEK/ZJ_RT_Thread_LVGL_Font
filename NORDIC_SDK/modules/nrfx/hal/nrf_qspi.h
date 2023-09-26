@@ -228,6 +228,7 @@ typedef struct
     bool                  io3_level; /**< I/O line level during transmission. */
     bool                  wipwait;   /**< Wait if a Wait in Progress bit is set in the memory status byte. */
     bool                  wren;      /**< Send write enable before instruction. */
+    bool                  lfen;      /**< Enable long frame mode. */
 } nrf_qspi_cinstr_conf_t;
 
 /**
@@ -756,6 +757,23 @@ __STATIC_INLINE void nrf_qspi_cinstrdata_get(NRF_QSPI_Type const * p_reg,
     }
 }
 
+__STATIC_INLINE void nrf_qspi_cinstr_long_frame(NRF_QSPI_Type *                p_reg,
+                                                    bool lf_en)
+{
+    uint32_t tmp = p_reg->CINSTRCONF;
+    if(lf_en)
+    {
+        tmp |=  1 << QSPI_CINSTRCONF_LFEN_Pos;
+    }
+    else
+    {
+        tmp &=  0 << QSPI_CINSTRCONF_LFEN_Pos;      
+        tmp |=  0 << QSPI_CINSTRCONF_LFSTOP_Pos;       
+    }
+    p_reg->CINSTRCONF = tmp;
+}
+
+
 __STATIC_INLINE void nrf_qspi_cinstr_transfer_start(NRF_QSPI_Type *                p_reg,
                                                     const nrf_qspi_cinstr_conf_t * p_config)
 {
@@ -765,6 +783,18 @@ __STATIC_INLINE void nrf_qspi_cinstr_transfer_start(NRF_QSPI_Type *             
                          ((uint32_t)p_config->io3_level << QSPI_CINSTRCONF_LIO3_Pos) |
                          ((uint32_t)p_config->wipwait   << QSPI_CINSTRCONF_WIPWAIT_Pos) |
                          ((uint32_t)p_config->wren      << QSPI_CINSTRCONF_WREN_Pos));
+
+    uint32_t tmp = p_reg->CINSTRCONF;
+    if((uint32_t)p_config->lfen)
+    {
+        tmp |=  1 << QSPI_CINSTRCONF_LFEN_Pos;
+    }
+    else
+    {
+        tmp &=  0 << QSPI_CINSTRCONF_LFEN_Pos;      
+        tmp |=  0 << QSPI_CINSTRCONF_LFSTOP_Pos;       
+    }
+    p_reg->CINSTRCONF = tmp;
 }
 
 #endif // SUPPRESS_INLINE_IMPLEMENTATION
