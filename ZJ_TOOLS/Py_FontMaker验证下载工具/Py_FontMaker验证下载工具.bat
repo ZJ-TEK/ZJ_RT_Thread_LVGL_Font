@@ -2,58 +2,58 @@
 ::ping 127.0.0.1 -n 3 >nul
 
 
-:²Ëµ¥
+:èœå•
 echo ============================================
-echo          Py_FontMakerÑéÖ¤ÏÂÔØ¹¤¾ß
+echo          Py_FontMakeréªŒè¯ä¸‹è½½å·¥å…·
 echo ============================================
-echo    1.JlinkÏÂÔØFont_LVGL
-echo    2.JlinkÏÂÔØFont
-echo    3.Jlink²Á³ýnrf52840
-echo    4.JlinkÏÂÔØFont_libµ½norflash
+echo    1.Jlinkä¸‹è½½Font_LVGL
+echo    2.Jlinkä¸‹è½½Font
+echo    3.Jlinkæ“¦é™¤nrf52840
+echo    4.Jlinkä¸‹è½½Font_libåˆ°norflash
 echo ============================================
 
-set /p Ñ¡Ôñ=ÇëÊäÈëÃüÁî£º
-if %Ñ¡Ôñ%==1 (goto 1JlinkÏÂÔØFont_LVGL)
-if %Ñ¡Ôñ%==2 (goto 2JlinkÏÂÔØFont)
-if %Ñ¡Ôñ%==3 (goto 3Jlink²Á³ýnrf52840)
-if %Ñ¡Ôñ%==4 (goto 4JlinkÏÂÔØFont_libµ½norflash) else (goto ÎÞÐ§ÃüÁî)   
+set /p é€‰æ‹©=è¯·è¾“å…¥å‘½ä»¤ï¼š
+if %é€‰æ‹©%==1 (goto 1Jlinkä¸‹è½½Font_LVGL)
+if %é€‰æ‹©%==2 (goto 2Jlinkä¸‹è½½Font)
+if %é€‰æ‹©%==3 (goto 3Jlinkæ“¦é™¤nrf52840)
+if %é€‰æ‹©%==4 (goto 4Jlinkä¸‹è½½Font_libåˆ°norflash) else (goto æ— æ•ˆå‘½ä»¤)   
 
 
-:1JlinkÏÂÔØFont_LVGL
+:1Jlinkä¸‹è½½Font_LVGL
 .\JLink\jlink.exe .\Script\Jlink_download_nrf52840_lvgl.jlink
-echo ÏÂÔØÍê±Ï...
+echo ä¸‹è½½å®Œæ¯•...
 
 
 :pause>nul
-goto ²Ëµ¥
+goto èœå•
 
-:2JlinkÏÂÔØFont
+:2Jlinkä¸‹è½½Font
 .\JLink\jlink.exe .\Script\Jlink_download_nrf52840.jlink
-echo ÏÂÔØÍê±Ï...
+echo ä¸‹è½½å®Œæ¯•...
 
 
 :pause>nul
-goto ²Ëµ¥
+goto èœå•
 
 
-:3Jlink²Á³ýnrf52840
+:3Jlinkæ“¦é™¤nrf52840
 .\JLink\jlink.exe .\Script\Jlink_erase_nrf52840.jlink
-echo ¹Ì¼þ²Á³ýÍê±Ï
+echo å›ºä»¶æ“¦é™¤å®Œæ¯•
 
 
 :pause>nul
-goto ²Ëµ¥
+goto èœå•
 
 
 
-:4JlinkÏÂÔØFont_libµ½norflash
+:4Jlinkä¸‹è½½Font_libåˆ°norflash
 .\JLink\JFlashSPI_CL.exe -speed 50000  -connect -open .\hex\Font_Lib.bin 0 -auto
-echo ¹Ì¼þ²Á³ýÍê±Ï
+echo Font_libä¸‹è½½åˆ°norflashå®Œæ¯•
 
 
 :pause>nul
-goto ²Ëµ¥
+goto èœå•
 
-:ÎÞÐ§ÃüÁî
-echo ÎÞÐ§µÄÖ¸Áî Ö¸Áî·¶Î§£¨1-3£©ÖØÐÂÑ¡Ôñ
-goto ²Ëµ¥
+:æ— æ•ˆå‘½ä»¤
+echo æ— æ•ˆçš„æŒ‡ä»¤ æŒ‡ä»¤èŒƒå›´ï¼ˆ1-3ï¼‰é‡æ–°é€‰æ‹©
+goto èœå•
